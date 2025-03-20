@@ -13,6 +13,7 @@ contract firstNFT is ERC721 {
     uint256 public totalSupply = 2;
 
     event mintNFT(address account_, uint256 tokenId);
+
     constructor(string memory name_, string memory symbol_, string memory _baseUri) ERC721(name_, symbol_) {
         baseUri = _baseUri;
     }
