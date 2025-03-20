@@ -1,0 +1,15 @@
+{
+    "name": "Blockchain NFT God",
+    "description": "An exclusive NFT representing mastery in blockchain technology and NFT concepts.",
+    "image": "ipfs://bafybeicxoy6hwxz4lx7rx247xwprebxt5afwzdvjhqh27bpu4bsbj2ldou", 
+    "attributes": [
+      {
+        "trait_type": "Knowledge Level",
+        "value": "Expert"
+      },
+      {
+        "trait_type": "Rarity",
+        "value": "God"
+      }
+    ]
+  }
