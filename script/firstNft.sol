@@ -3,7 +3,7 @@
 pragma solidity >= 0.8.24;
 
 import {Script} from "forge-std/Script.sol";
-import {firstNFT} from "../src/firstNft.sol";
+import {firstNFT} from "../src/firstNFT.sol";
 
 contract firstNFTScript is Script {
     function run() external returns (firstNFT) {
