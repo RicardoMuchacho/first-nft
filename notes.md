@@ -27,3 +27,8 @@ vm.startBroadcast(private key) // like prank, indicates the deploying address
 
 Command to deploy:
 forge script [filePath] --rpc-url [rpcUrl chainlist] --broadcast --verify
+
+
+arb sepholia testnet rpc: https://arbitrum-sepolia.drpc.org
+
+forge script ./script/NftRoyalties.sol --rpc-url https://arbitrum-sepolia.drpc.org --broadcast --verify
