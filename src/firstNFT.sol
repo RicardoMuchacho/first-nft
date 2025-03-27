@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >= 0.8.24;
+pragma solidity >=0.8.24;
 
 import "../lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
 import {Strings} from "../lib/openzeppelin-contracts/contracts/utils/Strings.sol";
@@ -10,11 +10,15 @@ contract firstNFT is ERC721 {
 
     uint256 public currentTokenId;
     string public baseUri;
-    uint256 public totalSupply = 2;
+    uint256 public totalSupply = 500;
 
     event mintNFT(address account_, uint256 tokenId);
 
-    constructor(string memory name_, string memory symbol_, string memory _baseUri) ERC721(name_, symbol_) {
+    constructor(
+        string memory name_,
+        string memory symbol_,
+        string memory _baseUri
+    ) ERC721(name_, symbol_) {
         baseUri = _baseUri;
     }
 
@@ -32,10 +36,13 @@ contract firstNFT is ERC721 {
         return baseUri;
     }
 
-    function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
+    function tokenURI(
+        uint256 tokenId
+    ) public view virtual override returns (string memory) {
         _requireOwned(tokenId);
 
         string memory baseURI = _baseURI();
-        return bytes(baseURI).length > 0 ? string.concat(baseURI, tokenId.toString(), ".json") : "";
+        return
+            bytes(baseURI).length > 0 ? string.concat(baseURI, "0.json") : "";
     }
 }
